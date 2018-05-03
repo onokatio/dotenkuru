@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ドテンくる</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+	<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<section class="section">
+	<div class="container">
+
+		<div class="group_wrapper">
+			<div class="group">
+
+				<div class="dotenkuru_info_wrapper">
+					<table class="table is-narrow dotenkuru_info">
+						<tbody>
+						<tr>
+							<th colspan="2"><span class="icon is-small"><img src="/img/bffx.png"></span>bitFlyer FX</th>
+						</tr>
+						<tr>
+							<th>価格:</th>
+							<td id="bffx_td_last"></td>
+						</tr>
+						<tr>
+							<th>L価格:</th>
+							<td id="bffx_td_high"></td>
+						</tr>
+						<tr>
+							<th>S価格:</th>
+							<td id="bffx_td_low"></td>
+						</tr>
+						<tr>
+							<th>方向:</th>
+							<td id="bffx_td_side"></td>
+						</tr>
+						<tr>
+							<th>乖離:</th>
+							<td id="bffx_td_sfd"></td>
+						</tr>
+						<tr>
+							<th>更新時刻:</th>
+							<td id="bffx_td_time"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="group" style="margin-top: 1.5rem;">
+				<div class="dotenkuru_info_wrapper">
+					<table class="table is-narrow dotenkuru_info">
+						<tbody>
+						<tr>
+							<th colspan="2">
+								<span class="icon is-small"><img id="bffx_bot_icon" src="/img/icon_48.png"></span>
+								bitFlyer FX Bot 成績
+							</th>
+						</tr>
+						<tr>
+							<th>方向:</th>
+							<td id="bffx_td_bot_side"></td>
+						</tr>
+						<tr>
+							<th>取引価格:</th>
+							<td id="bffx_td_bot_entry_price"></td>
+						</tr>
+						<tr>
+							<th>取引日時:</th>
+							<td id="bffx_td_bot_entry_time"></td>
+						</tr>
+						<tr>
+							<th>損益:</th>
+							<td id="bffx_td_bot_now_ppl"></td>
+						</tr>
+						<tr>
+							<th>数量:</th>
+							<td id="bffx_td_bot_size"></td>
+						</tr>
+						<tr>
+							<th>取引回数:</th>
+							<td id="bffx_td_bot_trade_cnt"></td>
+						</tr>
+						<tr>
+							<th>勝率:</th>
+							<td id="bffx_td_bot_win_rate"></td>
+						</tr>
+						<tr>
+							<th>合計損益:</th>
+							<td id="bffx_td_bot_ppl"></td>
+						</tr>
+						<tr>
+							<th>総資産:</th>
+							<td id="bffx_td_bot_total_assets"></td>
+						</tr>
+						<tr>
+							<th>開始日時:</th>
+							<td id="bffx_td_bot_debut_time"></td>
+						</tr>
+						<tr style="display: none;">
+							<th>開始価格:</th>
+							<td id="bffx_td_bot_debut_price"></td>
+						</tr>
+						<tr>
+							<th>原資:</th>
+							<td id="bffx_td_bot_funds"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="group_wrapper">
+			<div class="group">
+				<div class="dotenkuru_info_wrapper">
+					<table class="table is-narrow dotenkuru_info">
+						<tbody>
+						<tr>
+							<th colspan="2"><span class="icon is-small"><img src="/img/bm.png"></span>BitMEX</th>
+						</tr>
+						<tr>
+							<th>価格:</th>
+							<td id="bm_td_last"></td>
+						</tr>
+						<tr>
+							<th>L価格:</th>
+							<td id="bm_td_high"></td>
+						</tr>
+						<tr>
+							<th>S価格:</th>
+							<td id="bm_td_low"></td>
+						</tr>
+						<tr>
+							<th>方向:</th>
+							<td id="bm_td_side"></td>
+						</tr>
+						<tr>
+							<th>更新時刻:</th>
+							<td id="bm_td_time"></td>
+						</tr>
+						<tr>
+							<th>&nbsp;</th>
+							<td>&nbsp;</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="group" style="margin-top: 1.5rem;">
+				<div class="dotenkuru_info_wrapper">
+					<table class="table is-narrow dotenkuru_info">
+						<tbody>
+						<tr>
+							<th colspan="2">
+								<span class="icon is-small"><img id="bm_bot_icon" src="/img/icon_48.png"></span>
+								BitMEX Bot 成績
+							</th>
+						</tr>
+						<tr>
+							<th>方向:</th>
+							<td id="bm_td_bot_side"></td>
+						</tr>
+						<tr>
+							<th>取引価格:</th>
+							<td id="bm_td_bot_entry_price"></td>
+						</tr>
+						<tr>
+							<th>取引日時:</th>
+							<td id="bm_td_bot_entry_time"></td>
+						</tr>
+						<tr>
+							<th>損益:</th>
+							<td id="bm_td_bot_now_ppl"></td>
+						</tr>
+						<tr>
+							<th>数量:</th>
+							<td id="bm_td_bot_size"></td>
+						</tr>
+						<tr>
+							<th>取引回数:</th>
+							<td id="bm_td_bot_trade_cnt"></td>
+						</tr>
+						<tr>
+							<th>勝率:</th>
+							<td id="bm_td_bot_win_rate"></td>
+						</tr>
+						<tr>
+							<th>合計損益:</th>
+							<td id="bm_td_bot_ppl"></td>
+						</tr>
+						<tr>
+							<th>総資産:</th>
+							<td id="bm_td_bot_total_assets"></td>
+						</tr>
+						<tr>
+							<th>開始日時:</th>
+							<td id="bm_td_bot_debut_time"></td>
+						</tr>
+						<tr style="display: none;">
+							<th>開始価格:</th>
+							<td id="bm_td_bot_debut_price"></td>
+						</tr>
+						<tr>
+							<th>原資:</th>
+							<td id="bm_td_bot_funds"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="group_wrapper">
+
+			<div class="group">
+
+				<div class="dotenkuru_info_wrapper">
+					<table class="table is-narrow dotenkuru_info">
+						<tbody>
+						<tr>
+							<th colspan="2"><span class="icon is-small"><img src="/img/bf.png"></span>bitFlyer 現物</th>
+						</tr>
+						<tr>
+							<th>価格:</th>
+							<td id="bf_td_last"></td>
+						</tr>
+						<tr>
+							<th>L価格:</th>
+							<td id="bf_td_high"></td>
+						</tr>
+						<tr>
+							<th>S価格:</th>
+							<td id="bf_td_low"></td>
+						</tr>
+						<tr>
+							<th>方向:</th>
+							<td id="bf_td_side"></td>
+						</tr>
+						<tr>
+							<th>更新時刻:</th>
+							<td id="bf_td_time"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+			<div class="group" style="margin-top: 1.5rem;">
+
+				<div class="dotenkuru_info_wrapper">
+					<table class="table is-narrow dotenkuru_info">
+						<tbody>
+						<tr>
+							<th colspan="2"><span class="icon is-small"><img src="/img/bfn.png"></span>Bitfinex</th>
+						</tr>
+						<tr>
+							<th>価格:</th>
+							<td id="bfn_td_last"></td>
+						</tr>
+						<tr>
+							<th>L価格:</th>
+							<td id="bfn_td_high"></td>
+						</tr>
+						<tr>
+							<th>S価格:</th>
+							<td id="bfn_td_low"></td>
+						</tr>
+						<tr>
+							<th>方向:</th>
+							<td id="bfn_td_side"></td>
+						</tr>
+						<tr>
+							<th>更新時刻:</th>
+							<td id="bfn_td_time"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="group" style="margin-top: 1.5rem;">
+				<div class="dotenkuru_info_wrapper">
+					<p>※ Bot の成績反映は遅れることがあります。</p>
+				</div>
+			</div>
+
+			<div class="group" style="margin-top: 1.0rem;">
+				<div class="field is-grouped">
+					<p class="control">
+						<label class="checkbox">
+							<input type="checkbox" id="chkEnableSFD">
+							SFD 通知
+						</label>
+					</p>
+				</div>
+				<div class="field is-grouped">
+					<p class="control">
+						<label class="checkbox">
+							<input type="checkbox" id="chkEnableSound">
+							通知音
+						</label>
+					</p>
+					<p class="control">
+						音量
+					<div class="select is-small">
+						<select id="selSoundVol">
+							<option value="10">10</option>
+							<option value="9">9</option>
+							<option value="8">8</option>
+							<option value="7">7</option>
+							<option value="6">6</option>
+							<option value="5">5</option>
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+					</div>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<script src="/js/jquery.js"></script>
+<script src="/js/popup.js"></script>
+</body>
+</html>

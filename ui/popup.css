@@ -1,0 +1,92 @@
+html {
+	background-color: #36393e;
+}
+
+body {
+	font-size: .85em;
+	background-color: #36393e;
+	color: #FFF;
+	font-family: 'Noto Sans Japanese', sans-serif;
+}
+
+.section {
+	padding: 1.5rem 1.5rem;
+}
+
+.container {
+	display: flex;
+}
+
+.checkbox, .radio {
+	color: #839496;
+}
+
+.checkbox:hover, .radio:hover {
+	color: #a7bcbf;
+}
+
+.control {
+	font-size: inherit;
+}
+
+.select select {
+	height: 2.0em;
+}
+
+.group_wrapper:nth-child(n + 2) {
+	margin-left: 24px;
+}
+
+.group {
+	/*	display: flex;*/
+	/*	justify-content: flex-end;*/
+	/*	width: 708px;*/
+}
+
+.group p {
+	color: #839496;
+}
+
+.icon {
+	margin-right: 0.2rem;
+}
+
+.dotenkuru_info_wrapper {
+	background-color: #2f3136;
+	border: 2px solid #282b30;
+	border-radius: 5px;
+	padding: .5em;
+	width: 220px;
+}
+
+.dotenkuru_info_wrapper:nth-child(n + 2) {
+	margin-left: 24px;
+}
+
+.table.dotenkuru_info {
+	background-color: #2f3136;
+	color: #839496;
+	margin-bottom: 0;
+}
+
+.table.dotenkuru_info th {
+	color: #839496 !important;
+	font-weight: normal;
+}
+
+.table.dotenkuru_info td, .table.dotenkuru_info th {
+	border: none;
+	padding: 2px;
+}
+
+.table.dotenkuru_info tr:nth-child(1) td, .table.dotenkuru_info tr:nth-child(1) th {
+	border-bottom: 1px dashed;
+}
+
+.table.dotenkuru_info tr:nth-child(2) td, .table.dotenkuru_info tr:nth-child(2) th {
+	padding-top: 6px;
+}
+
+.table.dotenkuru_info tr th {
+	padding-right: 10px;
+}

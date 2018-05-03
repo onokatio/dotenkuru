@@ -1,0 +1,27 @@
+{
+   "author": "Crypto KAERU",
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "ui/popup.html",
+      "default_title": "ドテンくる"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.js" ],
+      "matches": [ "https://*.bitflyer.jp/*", "https://*.bitmex.com/*", "https://api.cryptowat.ch/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "ビットコインFX自動売買BOTがポジションエントリーするタイミングをお知らせします。",
+   "icons": {
+      "128": "img/icon_128.png",
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvmuobs1O+ggmsoxLTJywyNK5hyohHbtlkjlx6zB58170aVdmWeMHWDtYQcrXvp3tSn53E4p1BI/+2cmcmxAXvL9oE7/8YrFPpA/0Cs7kK97Xiyh2nk/Ek0nz6Mhgj3zPXe2Lkk67Dsn8TU1dtR2yL1UWxYG4ZOhsMZskC3aaTYuj8pK46Wd7diAQTUs/zXArHJ5hHdHkef0tMw+tfyH2TNvjF0Wvln6nGx14Vqz3tIaAyVVNvrwnlCetpFaiZ60dtoSCN0eWAspsPilZl2jOaR8HYBWsci+EnsvEgRq+DGRykSXvhLbvFytUBknABPKymZinwYjgk33d5p6oSPz2vwIDAQAB",
+   "manifest_version": 2,
+   "name": "ドテンくる",
+   "permissions": [ "storage", "notifications", "https://*.bitflyer.jp/*", "https://*.bitmex.com/*", "https://api.cryptowat.ch/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.6.2"
+}
